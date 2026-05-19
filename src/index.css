@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-coffee-black: #0c0908;
+  --color-coffee-dark: #120e0d;
+  --color-coffee-medium: #1a1412;
+  --color-coffee-light: #2c1f1a;
+  --color-coffee-accent: #483327;
+  --color-gold: #c5a880;
+  --color-gold-bright: #dfc097;
+  --color-gold-dark: #9f825e;
+  --color-cream-light: #fdfaf7;
+  --color-cream: #f4eae1;
+  --color-cream-dark: #d8c2b0;
+  
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Outfit", "Inter", sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  background-color: #0c0908;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0c0908;
+  color: #f4eae1;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0908;
+}
+::-webkit-scrollbar-thumb {
+  background: #2c1f1a;
+  border-radius: 4px;
+  border: 2px solid #0c0908;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a880;
+}
+
+/* Glassmorphism Classes */
+.glass-nav {
+  background: rgba(12, 9, 8, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(197, 168, 128, 0.1);
+}
+
+.glass-card {
+  background: rgba(18, 14, 13, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 168, 128, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(197, 168, 128, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(197, 168, 128, 0.08);
+  transform: translateY(-4px);
+}
+
+.glass-input {
+  background: rgba(26, 20, 18, 0.4);
+  border: 1px solid rgba(197, 168, 128, 0.15);
+  color: #fdfaf7;
+  transition: all 0.3s ease;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: #c5a880;
+  box-shadow: 0 0 10px rgba(197, 168, 128, 0.25);
+  background: rgba(26, 20, 18, 0.7);
+}
+
+/* Text Gradients */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #dfc097 0%, #c5a880 50%, #9f825e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero Title Steam Wave Animation */
+@keyframes steam-rise {
+  0% {
+    transform: translateY(0) scaleX(1) opacity(0);
+  }
+  15% {
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-50px) scaleX(1.1) opacity(0.2);
+  }
+  100% {
+    transform: translateY(-100px) scaleX(1.3) opacity(0);
+  }
+}
+
+.steam-particle {
+  position: absolute;
+  bottom: 10%;
+  width: 10px;
+  height: 10px;
+  background: rgba(244, 234, 225, 0.15);
+  border-radius: 50%;
+  filter: blur(8px);
+  animation: steam-rise 6s infinite linear;
+}
+
+/* Float Spark Animation */
+@keyframes float-spark {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-150px) translateX(var(--spark-x, 20px)) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #c5a880;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 4px #c5a880);
+  opacity: 0;
+  animation: float-spark 8s infinite ease-in-out;
+}
+
+/* Coffee Cup Rotation/Floating */
+@keyframes slow-hover {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.floating-coffee {
+  animation: slow-hover 7s infinite ease-in-out;
+}
+
+/* Spotlight glow background effect */
+.spotlight {
+  background: radial-gradient(circle 800px at var(--x, 50%) var(--y, 50%), rgba(197, 168, 128, 0.04), transparent 80%);
+  pointer-events: none;
+}

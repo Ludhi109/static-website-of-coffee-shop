@@ -27,6 +27,12 @@ const galleryImages = [
     category: 'Atmosphere',
     span: 'h-[250px]',
   },
+  {
+    src: '/barista_pouring.png',
+    title: 'The Artisanal Pour',
+    category: 'Craftsmanship',
+    span: 'h-[250px]',
+  },
 ]
 
 export default function Gallery() {

@@ -38,7 +38,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative py-28 px-6 md:px-12 bg-coffee-dark overflow-hidden">
+    <section id="contact" className="relative py-28 px-6 md:px-12 bg-coffee-dark overflow-hidden scroll-mt-24">
       {/* Background radial glow */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-gold/3 blur-[140px] rounded-full pointer-events-none"></div>
 

@@ -42,7 +42,7 @@ export default function Testimonials() {
   }
 
   return (
-    <section id="testimonials" className="relative py-28 px-6 md:px-12 bg-coffee-black overflow-hidden">
+    <section id="testimonials" className="relative py-28 px-6 md:px-12 bg-coffee-black overflow-hidden scroll-mt-24">
       {/* Background soft glowing orb */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gold/3 blur-[120px] rounded-full pointer-events-none"></div>
 

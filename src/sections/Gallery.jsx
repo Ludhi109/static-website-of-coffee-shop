@@ -43,7 +43,7 @@ export default function Gallery() {
   }
 
   return (
-    <section id="gallery" className="relative py-28 px-6 md:px-12 bg-coffee-dark overflow-hidden">
+    <section id="gallery" className="relative py-28 px-6 md:px-12 bg-coffee-dark overflow-hidden scroll-mt-24">
       {/* Background ambient light */}
       <div className="absolute bottom-10 right-0 w-[450px] h-[450px] bg-gold/3 blur-[110px] rounded-full pointer-events-none"></div>
 

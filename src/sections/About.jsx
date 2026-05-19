@@ -33,7 +33,7 @@ function Counter({ value, suffix = '', duration = 2000 }) {
 
 export default function About() {
   return (
-    <section id="about" className="relative py-28 px-6 md:px-12 bg-coffee-black overflow-hidden">
+    <section id="about" className="relative py-28 px-6 md:px-12 bg-coffee-black overflow-hidden scroll-mt-24">
       {/* Background elements */}
       <div className="absolute right-0 top-1/4 w-[500px] h-[500px] bg-gold/3 blur-[120px] rounded-full pointer-events-none"></div>
 
